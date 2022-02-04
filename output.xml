@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220203 23:55:31.875" rpa="false" schemaversion="2">
+<suite id="s1" name="Form" source="/media/lucas/ARQUIVOS/dev/robotframework/form.robot">
+<test id="s1-t1" name="1 - Preencher formulário">
+<kw name="abrir navegador">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://itera-qa.azurewebsites.net/home/automation</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220203 23:55:31.977" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20220203 23:55:31.977" endtime="20220203 23:55:35.084"/>
+</kw>
+<status status="PASS" starttime="20220203 23:55:31.976" endtime="20220203 23:55:35.085"/>
+</kw>
+<kw name="preencher campos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_name}</arg>
+<arg>Lucas</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220203 23:55:35.086" level="INFO">Typing text 'Lucas' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20220203 23:55:35.085" endtime="20220203 23:55:35.149"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_phone}</arg>
+<arg>31973056405</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220203 23:55:35.149" level="INFO">Typing text '31973056405' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20220203 23:55:35.149" endtime="20220203 23:55:35.204"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>lucas@mail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220203 23:55:35.205" level="INFO">Typing text 'lucas@mail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220203 23:55:35.204" endtime="20220203 23:55:35.321"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220203 23:55:35.322" level="INFO">Typing text '123456' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220203 23:55:35.321" endtime="20220203 23:55:35.405"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textarea_address}</arg>
+<arg>qweqwerqwer</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220203 23:55:35.406" level="INFO">Typing text 'qweqwerqwer' into text field 'id:address'.</msg>
+<status status="PASS" starttime="20220203 23:55:35.406" endtime="20220203 23:55:35.473"/>
+</kw>
+<status status="PASS" starttime="20220203 23:55:35.085" endtime="20220203 23:55:35.473"/>
+</kw>
+<kw name="clicar em Submit">
+<kw name="Click Element ${button_submit}">
+<msg timestamp="20220203 23:55:35.476" level="FAIL">No keyword with name 'Click Element ${button_submit}' found.</msg>
+<status status="FAIL" starttime="20220203 23:55:35.476" endtime="20220203 23:55:35.476"/>
+</kw>
+<status status="FAIL" starttime="20220203 23:55:35.474" endtime="20220203 23:55:35.477"/>
+</kw>
+<status status="FAIL" starttime="20220203 23:55:31.976" endtime="20220203 23:55:35.477">No keyword with name 'Click Element ${button_submit}' found.</status>
+</test>
+<status status="FAIL" starttime="20220203 23:55:31.876" endtime="20220203 23:55:35.478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Form">Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
