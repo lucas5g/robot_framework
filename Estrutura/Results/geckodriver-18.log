@@ -4,3 +4,8 @@
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCsdRwl/search.json.mozlz4", (void 0)))
 1644091133704	Marionette	INFO	Listening on port 40275
 1644091133759	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644096917367	Marionette	INFO	Stopped listening on port 40275
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

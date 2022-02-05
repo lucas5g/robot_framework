@@ -1,0 +1,10 @@
+1644097676264	geckodriver	INFO	Listening on 127.0.0.1:41771
+1644097676269	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile8QSDLO"
+1644097676831	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8QSDLO/search.json.mozlz4", (void 0)))
+1644097677722	Marionette	INFO	Listening on port 37767
+1644097677784	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644097682683	Marionette	INFO	Stopped listening on port 37767
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

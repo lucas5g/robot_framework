@@ -1,4 +1,38 @@
+*** Settings ***
+Library  SeleniumLibrary
 
+
+*** Variables ***
+#Dados gerais
+${URL}  https://www.phptravels.net/
+${Browser}  chrome
+
+#Dados do teste
+${PrimeiroNome}  Edward
+${UltimoNome}    Sheeran
+${Telefone}      555-431
+${Email}         teste@gmail.com
+${Senha}         123456
+
+#Elementos da página home
+${A_Signup}    //a[@href="https://www.phptravels.net/signup"] 
+${a_voos}     //a[contains(text(),"flights")] 
+${A_Visto}   //a[@href="https://www.phptravels.net/visa"] 
+
+#Elementos da página de registro
+${Input_PrimeiroNome}     //input[@placeholder="First Name"]
+${Input_UltimoNome}      //input[@placeholder="Last Name"]
+${Input_Telefone}       //input[@placeholder="Phone"]
+${Input_Email}         //input[@placeholder="Email"]
+${Input_Senha}        //input[@placeholder="Password"]
+${Button_Signup}     //button[@class="btn btn-default btn-lg btn-block effect ladda-button waves-effect"]
+${Button_Cookie}    //button[@id="cookie_stop"]
+
+#Elementos página de Login
+${Input_EmailLogin}      //input[@placeholder="Email"] 
+${Input_SenhaLogin}     //input[@placeholder="Password"]
+${Button_Logar}        //span[contains(text(),"Login")]
+${A_OpcaoLogin}      (//a[@href="https://www.phptravels.net/login"])[2]
 
 
 #Elementos da página do vôo
@@ -42,6 +76,41 @@ ${Input_InformaPaisOrigem}   //input[@aria-controls="select2-from_country-result
 
 *** Keywords ***
 
+Dado que eu acesse o php travels
+    Open Browser  ${URL}  ${Browser}
+    Maximize Browser Window
+
+E realize o cadastro
+    Wait Until Element Is Visible      ${A_Signup}            10
+    Click Element                      ${A_Signup}
+    Wait Until Element Is Visible      ${Input_PrimeiroNome}  10
+    Input Text                         ${Input_PrimeiroNome}  ${PrimeiroNome}
+    Wait Until Element Is Visible      ${Input_UltimoNome}    10
+    Input Text                         ${Input_UltimoNome}    ${UltimoNome}     
+    Wait Until Element Is Visible      ${Input_Telefone}      10
+    Input Text                         ${Input_Telefone}      ${Telefone}  
+    Wait Until Element Is Visible      ${Input_Email}         10
+    Input Text                         ${Input_Email}         ${Email}  
+    Wait Until Element Is Visible      ${Input_Senha}         10 
+    Input Text                         ${Input_Senha}         ${Senha}
+    Wait Until Element Is Visible      ${Button_Cookie}       10
+    Click Element                      ${Button_Cookie}          
+    Wait Until Element Is Visible      ${Button_Signup}       10 
+    Sleep                              2s
+    Run Keyword And Ignore Error       Click Element                      ${Button_Signup}    
+    Click Element                      ${Button_Signup}
+
+E faça o Login
+    Wait Until Element Is Visible  ${A_OpcaoLogin}      10
+    Click Element                  ${A_OpcaoLogin} 
+    Wait Until Element Is Visible  ${Input_EmailLogin}  10
+    Input Text                     ${Input_EmailLogin}  ${Email}
+    Wait Until Element Is Visible  ${Input_SenhaLogin}  10
+    Input Text                     ${Input_SenhaLogin}  ${Senha}
+    Run Keyword And Ignore Error   Wait Until Element Is Visible  ${Button_Cookie}     5
+    Run Keyword And Ignore Error   Click Element                  ${Button_Cookie}
+    Wait Until Element Is Visible  ${Button_Logar}      10
+    Click Element                  ${Button_Logar} 
 
 Quando eu realizo uma busca de um vôo ida e volta
     Wait Until Element Is Visible  ${a_voos}           10
@@ -80,7 +149,23 @@ E fecho o navegador
 
 
 
-
+*** Test Cases ***
+TC01 - Reservando passagem de destinos dentro dos EUA na classe econômica
+    Dado que eu acesse o php travels
+    E realize o cadastro 
+    E faça o Login
+    Quando eu realizo uma busca de um vôo ida e volta
+    E saindo de Los Angeles EUA
+    #E indo para 
+    #E saindo na data
+    #E voltando na data
+    #Quando eu clico em buscar
+    #E seleciono o primeiro vôo
+    #E preencho os dados do passageiro
+    #E preencho os dados de pagamento
+    #E clico em confirmar
+    #Então a página de confirmação de viagem é exibida
+    E fecho o navegador
 
 TC02 - Reservando passagens internacionais na classe econômica
     Dado que eu acesse o php travels
