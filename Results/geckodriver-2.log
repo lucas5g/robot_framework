@@ -1,0 +1,16 @@
+1644088749303	geckodriver	INFO	Listening on 127.0.0.1:34083
+1644088749307	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilefmx5l0"
+1644088749966	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefmx5l0/search.json.mozlz4", (void 0)))
+1644088750941	Marionette	INFO	Listening on port 38479
+1644088751549	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644088753378	Marionette	INFO	Stopped listening on port 38479
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1644088753421	geckodriver::marionette	ERROR	Failed to close browser connection: Transport endpoint is not connected (os error 107)
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 963: Error: Error(s) encountered during statement execution: disk I/O error
+[2022-02-05T19:19:13Z ERROR glean] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "Arquivo ou diretório inexistente" })) }
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

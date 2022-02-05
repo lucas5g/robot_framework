@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220205 17:18:41.351" rpa="false" schemaversion="2">
+<suite id="s1" name="TC01" source="/media/lucas/ARQUIVOS/dev/robotframework/Tests/Voo/TC01.robot">
+<test id="s1-t1" name="TC01 - Reservando passagem de destinos dentro dos EUA na classe econômica">
+<kw name="Dado que eu acesse o php travels" library="Login_Steps">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220205 17:18:41.462" level="INFO">Opening browser 'firefox' to base url 'https://www.phptravels.net/'.</msg>
+<msg timestamp="20220205 17:18:41.464" level="INFO">Firefox driver log is always forced to to: /media/lucas/ARQUIVOS/dev/robotframework/Results/geckodriver-23.log</msg>
+<status status="PASS" starttime="20220205 17:18:41.462" endtime="20220205 17:18:47.838"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220205 17:18:47.838" endtime="20220205 17:18:48.151"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:41.462" endtime="20220205 17:18:48.151"/>
+</kw>
+<kw name="E faça o Login" library="Login_Steps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login.A_OpcaoLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:48.152" endtime="20220205 17:18:48.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login.A_OpcaoLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:48.179" level="INFO">Clicking element '(//a[@href="https://www.phptravels.net/login"])[2]'.</msg>
+<status status="PASS" starttime="20220205 17:18:48.178" endtime="20220205 17:18:48.544"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:48.544" endtime="20220205 17:18:48.577"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Login.Input_EmailLogin}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:48.578" level="INFO">Typing text 'teste@gmail.com' into text field '//input[@placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20220205 17:18:48.577" endtime="20220205 17:18:48.610"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:48.610" endtime="20220205 17:18:48.624"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Login.Input_SenhaLogin}</arg>
+<arg>${Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:48.625" level="INFO">Typing text '123456' into text field '//input[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20220205 17:18:48.624" endtime="20220205 17:18:48.640"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${Button_Cookie}</arg>
+<arg>5</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_Cookie}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220205 17:18:48.641" level="FAIL">Variable '${Button_Cookie}' not found.</msg>
+<status status="FAIL" starttime="20220205 17:18:48.641" endtime="20220205 17:18:48.642"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:48.640" endtime="20220205 17:18:48.642"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>${Button_Cookie}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Cookie}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:48.642" level="FAIL">Variable '${Button_Cookie}' not found.</msg>
+<status status="FAIL" starttime="20220205 17:18:48.642" endtime="20220205 17:18:48.642"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:48.642" endtime="20220205 17:18:48.642"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:48.643" endtime="20220205 17:18:48.657"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:48.658" level="INFO">Clicking element '//span[contains(text(),"Login")]'.</msg>
+<status status="PASS" starttime="20220205 17:18:48.657" endtime="20220205 17:18:49.265"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:48.151" endtime="20220205 17:18:49.265"/>
+</kw>
+<kw name="Quando eu realizo uma busca de um vôo ida e volta" library="Voo_Steps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Home.a_voos}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:49.266" endtime="20220205 17:18:49.295"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Home.a_voos}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:49.296" level="INFO">Clicking element '//a[contains(text(),"flights")]'.</msg>
+<status status="PASS" starttime="20220205 17:18:49.295" endtime="20220205 17:18:49.874"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Voo.Input_IdaeVolta}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:49.874" endtime="20220205 17:18:49.894"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Voo.Input_IdaeVolta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:49.895" level="INFO">Clicking element '//input[@id="round-trip"]'.</msg>
+<status status="PASS" starttime="20220205 17:18:49.894" endtime="20220205 17:18:50.127"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:49.265" endtime="20220205 17:18:50.127"/>
+</kw>
+<kw name="E saindo de Los Angeles EUA" library="Voo_Steps" sourcename="E saindo de ${Texto}">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Voo.Input_Ida}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220205 17:18:50.127" endtime="20220205 17:18:50.144"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Voo.Input_Ida}</arg>
+<arg>${Texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220205 17:18:50.145" level="INFO">Typing text 'Los Angeles EUA' into text field '//input[@id="autocomplete"]'.</msg>
+<status status="PASS" starttime="20220205 17:18:50.144" endtime="20220205 17:18:52.012"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Voo.Input_Ida}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220205 17:18:52.013" level="INFO">Sending key(s) ('ARROW_DOWN',) to //input[@id="autocomplete"] element.</msg>
+<msg timestamp="20220205 17:18:52.289" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20220205 17:18:52.289" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20220205 17:18:52.013" endtime="20220205 17:18:52.297"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Voo.Input_Ida}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220205 17:18:52.298" level="INFO">Sending key(s) ('ENTER',) to //input[@id="autocomplete"] element.</msg>
+<msg timestamp="20220205 17:18:52.566" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220205 17:18:52.566" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220205 17:18:52.297" endtime="20220205 17:18:52.571"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:50.127" endtime="20220205 17:18:52.571"/>
+</kw>
+<kw name="E fecho o navegador" library="Login_Steps">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220205 17:18:52.571" endtime="20220205 17:18:53.006"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:52.571" endtime="20220205 17:18:53.006"/>
+</kw>
+<status status="PASS" starttime="20220205 17:18:41.461" endtime="20220205 17:18:53.007"/>
+</test>
+<status status="PASS" starttime="20220205 17:18:41.352" endtime="20220205 17:18:53.008"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC01">TC01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
