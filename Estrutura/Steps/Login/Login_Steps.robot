@@ -42,3 +42,11 @@ E faça o Login
 
 E fecho o navegador
     Close Browser
+
+Fazer Login
+    Dado que eu acesse o php travels
+    E realize o cadastro
+    E faça o Login
+
+Fechar Navegador 
+    E fecho o navegador
