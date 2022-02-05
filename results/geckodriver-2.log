@@ -1,0 +1,24 @@
+1644076571380	geckodriver	INFO	Listening on 127.0.0.1:49391
+1644076572379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileWmfWB2"
+1644076573124	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWmfWB2/search.json.mozlz4", (void 0)))
+1644076574648	Marionette	INFO	Listening on port 42745
+1644076574708	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1644076576134	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/OJsPeSlINeJyzOQXpTvtD9cMgHq4K4YXI50fjA0xvQc.js line 1 > eval line 3834 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1644076580466	Marionette	INFO	Stopped listening on port 42745
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

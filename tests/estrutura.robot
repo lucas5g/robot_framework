@@ -9,17 +9,18 @@ ${variavel3}    1554545
 
 *** Keywords ***
 abrir site da google
-    Open Browser    https://google.com.br   chrome
+    Open Browser    https://google.com.br   firefox
     Close Browser
 
 abrir site da globo
-    Open Browser    https://globo.com   chrome
+    Open Browser    https://globo.com   firefox
     Close Browser
 
 
 
 *** Test Cases ***
 Cenário 1: Teste de abrir navegador
+    [Tags]  regressivo  admin
     abrir site da google
 
 Cenário 2: abrir site da globo

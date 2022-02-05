@@ -2,12 +2,19 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${input_name}          id:name
-${input_phone}         id:phone 
-${input_email}         id:email 
-${input_password}      id:password
-${textarea_address}    id:address
-${button_submit}       name:submit
+# ${input_name}          id:name
+# ${input_phone}         id:phone 
+# ${input_email}         id:email 
+# ${input_password}      id:password
+# ${textarea_address}    id:address
+# ${button_submit}       name:submit
+
+${input_name}          //input[@id="name"]
+${input_phone}         //input[@id="phone"]
+${input_email}         //input[@id="email"]
+${input_password}      //input[@id="password"]
+${textarea_address}    //textarea[@id="address"]
+${button_submit}       //button[@name="submit"]
 
 
 
@@ -15,7 +22,7 @@ ${button_submit}       name:submit
 
 *** Keywords ***
 abrir navegador
-    Open Browser     https://itera-qa.azurewebsites.net/home/automation    chrome
+    Open Browser    https://itera-qa.azurewebsites.net/home/automation    firefox
 
 preencher campos
     Input Text    ${input_name}          Lucas
@@ -29,7 +36,7 @@ abrir site da globo
     Close Browser
 
 clicar em Submit
-    Click Element ${button_submit}
+    Click Element    ${button_submit}
 
 
 *** Test Cases ***
@@ -37,6 +44,7 @@ clicar em Submit
     abrir navegador
     preencher campos
     clicar em Submit
+    Close Browser
     # acessar site
     # preencher campos
     # clicar em Submit
