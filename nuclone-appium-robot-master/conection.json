@@ -1,0 +1,7 @@
+{
+    "automationName": "UiAutomator2",
+    "platformName": "Android",
+    "deviceName": "android_10",
+    "app": "/media/lucas/ARQUIVOS/dev/robotframework/nuclone-appium-robot-master/app/nuclone.apk",
+    "udid": "emulator-5554"
+}
