@@ -1,20 +1,18 @@
 *** Settings ***
 Documentation    Teste da página login
-Library          Browser
+Resource         ../resources/base.robot
 
-# Test Setup    Open Browser    https://parodify.herokuapp.com/users/sign_in    chromium
-Test Setup      New Page        https://parodify.herokuapp.com/users/sign_in
-
+# Test Setup     Open Browser       https://parodify.herokuapp.com/users/sign_in    chromium
+Test Setup       New Page           https://parodify.herokuapp.com/users/sign_in
 Test Teardown    Take Screenshot
 
-Resource    resources/login_actions.robot
 
 *** Test Cases ***
 Login com sucesso
-    Get Text                   [for=user_email]         contains    Email
-    Login With                 lucas@mail.com           qweqwe
-    Wait For Elements State    css=a[href$=sign_out]    visible     10
-
+    [Tags]                           smoke
+    Get Text                         [for=user_email]    contains    Email
+    Login With                       lucas@mail.com      qweqwe
+    Logout Link Should Be Visible
 Senha incorreta
     Get Text           [for=user_email]                      contains    Email
     Login With         lucas@mail.com                        123
