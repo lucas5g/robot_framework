@@ -10,6 +10,7 @@ Rodar todos os tests
 robot -d results tests
 
 Rodar test por tags
+robot -d logs/ -i long  tests/buttons.robot
 
 Rodar test com variáveis
 robot -d logs -v browser:firefox -v headless:false tests/     
