@@ -1,7 +1,8 @@
 *** Settings ***
 Library    AppiumLibrary
+Library    libs/extend.py
 
-Resource                  helpers.robot
+Resource    helpers.robot
 
 *** Keywords ***
 Open Session
@@ -15,5 +16,6 @@ Open Session
 
 
 Close Session
+    Capture Page Screenshot
     Close Application
 
